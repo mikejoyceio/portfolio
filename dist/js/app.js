@@ -1,97 +1,97 @@
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
-	stars();
+// 	stars();
 
-	/* Simple Animation Engine */
+// 	/* Simple Animation Engine */
 
-	var timeoutID;
+// 	var timeoutID;
 
-	var animation = {
+// 	var animation = {
 
-		color: function(duration,delay,color) {
+// 		color: function(duration,delay,color) {
 
-			timeoutID = window.setTimeout(function() {
-				jQuery("body").animate({
-			    backgroundColor: '#' + color
-				}, duration );	
-			}, delay);
+// 			timeoutID = window.setTimeout(function() {
+// 				jQuery("body").animate({
+// 			    backgroundColor: '#' + color
+// 				}, duration );	
+// 			}, delay);
 
-		},
+// 		},
 
-		stars: function(transition,duration,delay) {
+// 		stars: function(transition,duration,delay) {
 
-			timeoutID = window.setTimeout(function() {
-				if(transition==='in') {
-					$('#stars').fadeIn(duration);
-				}
-				if(transition==='out') {
-					$('#stars').fadeOut(duration);
-				}
-			}, delay);
+// 			timeoutID = window.setTimeout(function() {
+// 				if(transition==='in') {
+// 					$('#stars').fadeIn(duration);
+// 				}
+// 				if(transition==='out') {
+// 					$('#stars').fadeOut(duration);
+// 				}
+// 			}, delay);
 
-		},
+// 		},
 
-		clouds: function(transition,duration,delay) {
+// 		clouds: function(transition,duration,delay) {
 
-			timeoutID = window.setTimeout(function() {
-				if(transition==='in') {
-					$('#clouds').fadeIn(duration);
-				}
-				if(transition==='out') {
-					$('#clouds').fadeOut(duration);
-				}
-			}, delay);
+// 			timeoutID = window.setTimeout(function() {
+// 				if(transition==='in') {
+// 					$('#clouds').fadeIn(duration);
+// 				}
+// 				if(transition==='out') {
+// 					$('#clouds').fadeOut(duration);
+// 				}
+// 			}, delay);
 
-		},
+// 		},
 
-		move: function(identifier,duration) {
-			$('.' + identifier).animate({
-				'margin-left': '-1000px'
-				}, duration, 'linear', function() {
-					$('.' + identifier).css('margin-left', '1000px');
-					animation.move(identifier,duration);
-			});		
-		},
+// 		move: function(identifier,duration) {
+// 			$('.' + identifier).animate({
+// 				'margin-left': '-1000px'
+// 				}, duration, 'linear', function() {
+// 					$('.' + identifier).css('margin-left', '1000px');
+// 					animation.move(identifier,duration);
+// 			});		
+// 		},
 
-		feature: function(value,duration,delay) {
+// 		feature: function(value,duration,delay) {
 
-			timeoutID = window.setTimeout(function() {
-				$('.feature').animate({'margin-top': value + '%' }, duration);
-			}, delay);
+// 			timeoutID = window.setTimeout(function() {
+// 				$('.feature').animate({'margin-top': value + '%' }, duration);
+// 			}, delay);
 
-		},
+// 		},
 
-		clear: function() { 
+// 		clear: function() { 
 
-			window.clearTimeout(timeoutID);
+// 			window.clearTimeout(timeoutID);
 
-		}
-	}
+// 		}
+// 	}
 
-	/* Animations */
+// 	/* Animations */
 
-	clearAllTimeout();
+// 	clearAllTimeout();
 
-	animation.stars('out',0,0);
+// 	animation.stars('out',0,0);
 
-	animation.clouds('in',1000,0);
+// 	animation.clouds('in',1000,0);
 
-	animation.color(1500,0,'33ccee');
+// 	animation.color(1500,0,'33ccee');
 
-	animation.color(5000,8000,'202020');
+// 	animation.color(5000,8000,'202020');
 
-	animation.clouds('out',4000,14500);
+// 	animation.clouds('out',4000,14500);
 
-	animation.stars('in',3000,19000);
+// 	animation.stars('in',3000,19000);
 
-	animation.color(5000,42000,'33ccee');
+// 	animation.color(5000,42000,'33ccee');
 
-	animation.stars('out',2000,39000);
+// 	animation.stars('out',2000,39000);
 
-	animation.clouds('in',1000,42500);
+// 	animation.clouds('in',1000,42500);
 
-});
+// });
 
 /* Canvas Stars */
 
