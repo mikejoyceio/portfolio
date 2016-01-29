@@ -11,45 +11,68 @@ body {
 /* Feature */
 
 .feature {
-	margin-top: 15%;	
+	margin-top: 15%;
 }
 
 h1 {
-	font-size: 50px;
+	font-size: 64px;
+	font-weight: 800;
+	margin: 0 0 12px;
 }
 
 h2 {
 	font-weight: 300;
+	font-size: 23px;
+	margin: 0 0 30px;
+	opacity: 0.8;
 }
 
 h1, h2 {
-	color: #fff;	
+	color: #fff;
 	font-family: 'Lato', sans-serif;
 	text-align: center;
-}	
+}
 
 .social-links {
 	list-style: none;
-	width: 210px;
+	text-align: center;
 	margin: auto;
+	margin: 0;
+	padding: 0;
 }
 
 .social-links > li {
 	display: inline-block;
 	z-index: 999999;
+	padding: 0;
+	margin: 0 8px;
 }
 
-.social-links > li .icon {
+.social-links .label {
+	display: none;
+}
+
+.social-links a:before {
 	color: #fff;
-	padding: 5px 2px;
 	-webkit-transition: all .3s linear;
 	-moz-transition: all .3s linear;
 	-ms-transition: all .3s linear;
 	-o-transition: all .3s linear;
-	transition: all .3s linear;	
+	transition: all .3s linear;
+	border: 1px solid #fff;
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 22px;
+	border-radius: 999px;
+	padding: 0;
+	margin: 0;
+	line-height: 3.2em;
 }
 
-.social-links > li .icon:hover {
+.social-links a:hover:before {
+	background: rgba(255, 255, 255, 0.175);
 	cursor: pointer;
 }
 
@@ -101,19 +124,19 @@ h1, h2 {
 	background: #fff;
 	border-radius: 200px;
 	-moz-border-radius: 200px;
-	-webkit-border-radius: 200px;	
-	position: relative; 
+	-webkit-border-radius: 200px;
+	position: relative;
 }
 
 .cloud:before, .cloud:after {
 	content: '';
-	position: absolute; 
+	position: absolute;
 	background: #fff;
 	width: 100px; height: 80px;
 	position: absolute; top: -15px; left: 10px;
 	border-radius: 100px;
 	-moz-border-radius: 100px;
-	-webkit-border-radius: 100px; 	
+	-webkit-border-radius: 100px;
 	-webkit-transform: rotate(40deg);
 	transform: rotate(40deg);
 	-moz-transform: rotate(40deg);
@@ -133,22 +156,22 @@ h1, h2 {
 
 .c02 {
 	left: 200px;
-	top: 130px;	
+	top: 130px;
 	-webkit-transform: scale(0.6);
 	-moz-transform: scale(0.6);
 	transform: scale(0.6);
-	opacity: 0.3; 
+	opacity: 0.3;
 	-webkit-animation: clouds 35s linear infinite;
 	-moz-animation: clouds 35s linear infinite;
 	-o-animation: clouds 35s linear infinite;
 }
 
 .c03 {
-	left: -250px; top: -400px;	
+	left: -250px; top: -400px;
 	-webkit-transform: scale(0.8);
 	-moz-transform: scale(0.8);
 	transform: scale(0.8);
-	opacity: 0.5; 
+	opacity: 0.5;
 	-webkit-animation: clouds 65s linear infinite;
 	-moz-animation: clouds 65s linear infinite;
 	-o-animation: clouds 65s linear infinite;
@@ -211,42 +234,42 @@ h1, h2 {
   }
 }
 */
- 
+
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
   speak: none;
- 
+
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
- 
+
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
- 
+
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
- 
+
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   margin-left: .2em;
- 
+
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
- 
+
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
+
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- 
+
 .icon-github:before { content: '\e800'; } /* '' */
 .icon-twitter:before { content: '\e801'; } /* '' */
 .icon-linkedin:before { content: '\e802'; } /* '' */
