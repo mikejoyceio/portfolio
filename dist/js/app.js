@@ -178,21 +178,3 @@
 
 // }
 
-// Skype Button
-Skype.ui({
-  "name": "chat",
-  "element": "SkypeButton_Call_mikejoyceio_1",
-  "participants": ["mikejoyceio"],
-  "imageColor": "white",
-  "imageSize": 24
-});
-
-$('.skype img').css({
-	'margin': '5px',
-	'vertical-align': '-10px',
-	'width': '55px'
-});
-
-$('.skype p').css({
-	'font-size': '0'
-});
