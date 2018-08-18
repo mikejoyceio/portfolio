@@ -16,6 +16,9 @@ module.exports = {
   },
   plugins: [
   	`gatsby-plugin-react-helmet`,
+    `gatsby-plugin-page-transitions`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   	{
       resolve: `gatsby-plugin-postcss-sass`,
       options: {
@@ -32,7 +35,22 @@ module.exports = {
         name: `projects`
       }
     },
-    'gatsby-transformer-remark',
-    'gatsby-plugin-page-transitions'
-  ],
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          'gatsby-remark-copy-linked-files',
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 200,
+            },
+          },
+        ],
+      },
+    }
+  ]
 }
